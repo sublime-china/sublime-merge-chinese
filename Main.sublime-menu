@@ -1,20 +1,20 @@
 [
     {
-        "caption": "File",
+        "caption": "文件",
         "mnemonic": "F",
         "id": "file",
         "children":
         [
-            { "command": "prompt_new_repository", "caption": "New Repository" },
-            { "command": "display_clone_page", "caption": "Clone Repository…" },
-            { "command": "prompt_open_repository", "caption": "Open Repository…" },
-            { "command": "quick_switch_repository", "caption": "Switch Repository…" },
+            { "command": "prompt_new_repository", "caption": "新建仓库" },
+            { "command": "display_clone_page", "caption": "克隆仓库…" },
+            { "command": "prompt_open_repository", "caption": "打开仓库…" },
+            { "command": "quick_switch_repository", "caption": "切换仓库…" },
             {
-                "caption": "Open Recent",
+                "caption": "打开历史记录",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "quick_open_repository", "caption": "Select…" },
+                    { "command": "quick_open_repository", "caption": "选择…" },
                     { "caption": "-" },
                     { "command": "open_recent", "args": {"index": 0 } },
                     { "command": "open_recent", "args": {"index": 1 } },
@@ -33,19 +33,19 @@
                     { "command": "open_recent", "args": {"index": 14 } },
                     { "command": "open_recent", "args": {"index": 15 } },
                     { "caption": "-" },
-                    { "command": "clear_recent", "caption": "Clear Recent" },
+                    { "command": "clear_recent", "caption": "清除历史记录" },
                 ]
             },
             { "caption": "-" },
-            { "command": "new_window", "caption": "New Window" },
-            { "command": "close_window", "caption": "Close Window" },
+            { "command": "new_window", "caption": "新建窗口" },
+            { "command": "close_window", "caption": "关闭窗口" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "Exit", "mnemonic": "x", "platform": "Windows" },
-            { "command": "exit", "caption": "Quit", "mnemonic": "Q", "platform": "Linux" },
+            { "command": "exit", "caption": "退出", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "退出", "mnemonic": "Q", "platform": "Linux" },
         ]
     },
     {
-        "caption": "Edit",
+        "caption": "编辑",
         "mnemonic": "E",
         "id": "edit",
         "children":
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "caption": "Repository",
+        "caption": "仓库",
         "mnemonic": "R",
         "id": "repository",
         "children":
@@ -81,12 +81,12 @@
             },
             { "caption": "-" },
             {
-                "caption": "Checkout Branch…",
+                "caption": "切换分支",
                 "command": "show_command_palette",
                 "args": { "command": "checkout_branch" },
             },
             {
-                "caption": "Create Branch…",
+                "caption": "创建分支…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -94,7 +94,7 @@
                 }
             },
             {
-                "caption": "Rename Branch…",
+                "caption": "重命名分支…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -102,7 +102,7 @@
                 }
             },
             {
-                "caption": "Delete Branch…",
+                "caption": "删除分支…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -112,7 +112,7 @@
             },
             { "caption": "-" },
             {
-                "caption": "Merge Branch…",
+                "caption": "合并分支…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -120,7 +120,7 @@
                 }
             },
             {
-                "caption": "Rebase Branch…",
+                "caption": "Rebase分支…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -128,43 +128,43 @@
                 }
             },
             { "caption": "-" },
-            { "command": "open_dir", "args": {"dir": "$working_dir"}, "caption": "Open Containing Folder…" },
+            { "command": "open_dir", "args": {"dir": "$working_dir"}, "caption": "打开所在目录…" },
             { "caption": "-", "id": "end" }
         ]
     },
     {
-        "caption": "Navigate",
+        "caption": "导航",
         "mnemonic": "N",
         "id": "navigate",
         "children":
         [
-            { "command": "navigate_back", "caption": "Go Back" },
-            { "command": "navigate_forward", "caption": "Go Forward" },
-            { "command": "navigate_to_commit_message", "caption": "Go to Commit Changes" },
-            { "command": "navigate_to_head", "caption": "Go to HEAD" },
+            { "command": "navigate_back", "caption": "返回" },
+            { "command": "navigate_forward", "caption": "前进" },
+            { "command": "navigate_to_commit_message", "caption": "跳转到提交信息" },
+            { "command": "navigate_to_head", "caption": "跳转到HEAD" },
             {
-                "caption": "Navigate to Commit…",
+                "caption": "跳转到Commit…",
                 "command": "show_command_palette",
                 "args": {"command": "navigate_to_commit"},
             },
             { "caption": "-" },
-            { "command": "toggle_search", "caption": "Search" },
+            { "command": "toggle_search", "caption": "查找" },
             { "command": "show_command_palette", "args": {"command": "blame"}, "caption": "Blame…" },
-            { "command": "show_command_palette", "args": {"command": "file_history"}, "caption": "File History…" },
+            { "command": "show_command_palette", "args": {"command": "file_history"}, "caption": "文件历史…" },
             { "caption": "-", "id": "end" },
         ]
     },
     {
-        "caption": "Tools",
+        "caption": "工具",
         "mnemonic": "T",
         "id": "tools",
         "children":
         [
-            { "command": "show_command_palette", "caption": "Command Palette…" },
+            { "command": "show_command_palette", "caption": "命令面板…" },
             { "command": "refresh" },
             { "caption": "-" },
             {
-                "caption": "Edit .gitattributes…",
+                "caption": "编辑 .gitattributes…",
                 "command": "open_in_editor",
                 "args": {
                     "path": "$working_dir/.gitattributes", "line": "$line", "col": "$col",
@@ -172,7 +172,7 @@
                 },
             },
             {
-                "caption": "Edit .gitignore…",
+                "caption": "编辑 .gitignore…",
                 "command": "open_in_editor",
                 "args": {
                     "path": "$working_dir/.gitignore", "line": "$line", "col": "$col",
@@ -180,13 +180,13 @@
                 },
             },
             {
-                "caption": "Password Caching",
+                "caption": "密码缓存",
                 "platform": "!Windows",
                 "children":
                 [
                     {
                         "command": "git_config",
-                        "caption": "Don't Cache",
+                        "caption": "不缓存",
                         "args":
                         {
                             "key": "credential.helper",
@@ -197,7 +197,7 @@
                     },
                     {
                         "command": "git_config",
-                        "caption": "Cache for 10 minutes",
+                        "caption": "缓存10分钟",
                         "args":
                         {
                             "key": "credential.helper",
@@ -207,7 +207,7 @@
                     },
                     {
                         "command": "git_config",
-                        "caption": "Cache for 1 hour",
+                        "caption": "缓存1小时",
                         "args":
                         {
                             "key": "credential.helper",
@@ -217,7 +217,7 @@
                     },
                     {
                         "command": "git_config",
-                        "caption": "Cache for 1 day",
+                        "caption": "缓存1天",
                         "args":
                         {
                             "key": "credential.helper",
@@ -227,7 +227,7 @@
                     },
                     {
                         "command": "git_config",
-                        "caption": "Cache for 1 week",
+                        "caption": "缓存1星期",
                         "args":
                         {
                             "key": "credential.helper",
@@ -238,8 +238,8 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "init_gitflow", "caption": "Initialize Git Flow" },
-            { "command": "edit_gitflow_config", "caption": "Configure Git Flow" },
+            { "command": "init_gitflow", "caption": "初始化 Git Flow" },
+            { "command": "edit_gitflow_config", "caption": "配置 Git Flow" },
             {
                 "caption": "Start Git Flow Feature Branch",
                 "command": "gitflow_start_feature",
@@ -265,15 +265,15 @@
         ]
     },
     {
-        "caption": "Preferences",
+        "caption": "偏好",
         "mnemonic": "n",
         "id": "preferences",
         "children":
         [
-            { "command": "show_command_palette", "args": {"command": "preferences"}, "caption": "Preferences…" },
+            { "command": "show_command_palette", "args": {"command": "preferences"}, "caption": "偏好…" },
             { "caption": "-" },
             {
-                "caption": "Edit Settings…",
+                "caption": "编辑设置…",
                 "command": "open_in_editor",
                 "args":
                 {
@@ -282,7 +282,7 @@
                 },
             },
             {
-                "caption": "Edit Commit Message Settings…",
+                "caption": "编辑提交信息设置…",
                 "command": "open_in_editor",
                 "args":
                 {
@@ -291,24 +291,24 @@
                 },
             },
             { "caption": "-" },
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Browse Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览Packages…", "mnemonic": "B" },
         ]
     },
     {
-        "caption": "Help",
+        "caption": "帮助",
         "mnemonic": "H",
         "id": "help",
         "children":
         [
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "caption": "-" },
-            { "command": "show_license_window", "caption": "Enter License" },
+            { "command": "show_license_window", "caption": "输入许可证" },
             { "command": "remove_license"},
             { "caption": "-" },
-            { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
-            { "command": "generate_debug_info", "caption": "Debug Information" },
-            { "command": "show_changelog", "caption": "Changelog…" },
-            { "command": "show_about_window", "caption": "About Sublime Merge", "mnemonic": "A" },
+            { "command": "update_check", "caption": "检查更新…", "platform": "!Linux" },
+            { "command": "generate_debug_info", "caption": "调试信息" },
+            { "command": "show_changelog", "caption": "更新日志…" },
+            { "command": "show_about_window", "caption": "关于 Sublime Merge", "mnemonic": "A" },
         ]
     }
 ]
