@@ -1,0 +1,16 @@
+[
+    {
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "fetch",
+            "args": { "remote": "$remote" },
+            "description": "Fetch from $remote",
+        },
+    },
+    {
+        "description": "Delete $remote",
+        "command": "delete_remote",
+        "args": {"remote": "$remote"}
+    },
+]

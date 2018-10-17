@@ -1,0 +1,26 @@
+[
+    {
+        "caption": "File History",
+        "command": "search", "args": { "query": "file:\"$path\"" }
+    },
+    {
+        "caption": "Blame",
+        "command": "blame", "args": { "path": "$path" }
+    },
+    { "caption": "-" },
+    {
+        "caption": "Open in Editor…",
+        "command": "open_in_editor",
+        "args": { "path": "$working_dir/$path", "line": "$line" }
+    },
+    {
+        "caption": "Open Containing Folder…",
+        "command": "open_dir",
+        "args": { "path": "$working_dir/$path" }
+    },
+    {
+        "caption": "Copy File Path",
+        "command": "copy_to_clipboard",
+        "args": { "text": "$path" }
+    }
+]

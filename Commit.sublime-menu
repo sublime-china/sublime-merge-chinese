@@ -1,0 +1,82 @@
+[
+    {
+        "caption": "Copy Commit Hash",
+        "command": "copy_to_clipboard",
+        "args": {"text": "$commit"}
+    },
+    {
+        "caption": "View Tree",
+        "command": "view_tree",
+    },
+    {
+        "caption": "-",
+    },
+    {
+        "caption": "Checkout Commit",
+        "command": "checkout_branch", "args": {"branch": "$commit"}
+    },
+    {
+        "caption": "Create Branch at Commit",
+        "command": "show_command_palette", "args":
+        {
+            "command": "create_branch",
+            "args": { "from": "$commit" },
+        }
+    },
+    {
+        "caption": "Create Tag at Commit",
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "create_tag",
+            "args": { "commit": "$commit" },
+        },
+    },
+    {
+        "caption": "Edit Commit",
+        "children":
+        [
+            {
+                "caption": "Edit Commit Message",
+                "command": "edit_commit",
+            },
+            {
+                "caption": "Squash with Parent",
+                "command": "squash_commit",
+            },
+        ]
+    },
+    {
+        "caption": "Revert Commit",
+        "command": "revert_commit",
+        "args": {"commit": "$commit"}
+    },
+    {
+        "caption": "Cherry Pick Commit",
+        "command": "cherry_pick",
+        "args": {"commit": "$commit"}
+    },
+    {
+        "caption": "Reset $head_ref to this commit",
+        "children":
+        [
+            {
+                "caption": "Soft - Keep index and working directory, differences will show as staged",
+                "command": "reset",
+                "args": {"commit": "$commit", "mode": "soft"}
+            },
+            {
+
+                "caption": "Mixed (Default) - Keep working directory, differences will show as modifications",
+                "command": "reset",
+                "args": {"commit": "$commit", "mode": "mixed"}
+            },
+            {
+                "caption": "Hard - Reset index and working directory, ALL local changes are discarded",
+                "command": "reset",
+                "args": {"commit": "$commit", "mode": "hard"}
+            },
+        ]
+    },
+    { "caption": "-", "id": "end" }
+]

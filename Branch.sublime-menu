@@ -1,0 +1,67 @@
+[
+    { "command": "checkout_branch", "args": {"branch": "$branch"} },
+    { "command": "merge_branch", "args": {"branch": "$branch"} },
+    { "command": "rebase_branch", "args": { "branch": "$branch" } },
+    { "command": "delete_branch", "args": {"ref": "$ref"} },
+    {
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "rename_branch",
+            "args": {"branch": "$branch"},
+            "description": "Rename $branch…",
+        }
+    },
+    {
+        "caption": "Copy '$branch'",
+        "command": "copy_to_clipboard",
+        "args": {"text": "$branch"}
+    },
+    { "caption": "-" },
+    {
+        "caption": "Git Flow: Finish",
+        "command": "gitflow_finish_feature",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Finish",
+        "command": "gitflow_finish_bugfix",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Finish",
+        "command": "gitflow_finish_release",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Finish",
+        "command": "gitflow_finish_hotfix",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Rebase",
+        "command": "gitflow_rebase_feature",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Rebase",
+        "command": "gitflow_rebase_bugfix",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Rebase",
+        "command": "gitflow_rebase_release",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Rebase",
+        "command": "gitflow_rebase_hotfix",
+        "args": { "branch": "$branch" },
+    },
+    {
+        "caption": "Git Flow: Rebase",
+        "command": "gitflow_rebase_support",
+        "args": { "branch": "$branch" },
+    },
+    { "caption": "-", "id": "end" }
+]

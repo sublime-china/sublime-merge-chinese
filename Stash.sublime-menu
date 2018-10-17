@@ -1,0 +1,15 @@
+[
+    {
+        "caption": "Pop Stash",
+        "command": "pop_stash", "args": {"stash": "$stash"}
+    },
+    {
+        "caption": "Apply Stash",
+        "command": "apply_stash", "args": {"stash": "$stash"}
+    },
+    {
+        "caption": "Drop Stash",
+        "command": "drop_stash", "args": {"stash": "$stash"}
+    },
+    { "caption": "-", "id": "end" }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "description": "initialize $submodule_name",
+        "command": "initialize_submodule",
+        "args": {"submodule_path": "$submodule_path", "submodule_name": "$submodule_name"}
+    },
+    {
+        "caption": "Open Submodule",
+        "description": "Open $submodule_name",
+        "command": "open_submodule",
+        "args": {"submodule_path": "$submodule_path", }
+    },
+    {
+        "description": "Update $submodule_name",
+        "command": "update_submodule",
+        "args": {"submodule_path": "$submodule_path"}
+    },
+    {
+        "description": "Sync $submodule_name",
+        "command": "sync_submodule",
+        "args": {"submodule_path": "$submodule_path"}
+    },
+    { "caption": "-", "id": "end" }
+]

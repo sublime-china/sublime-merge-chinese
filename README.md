@@ -1,2 +1,2 @@
-# sublime-merge-chinese
-Sublime Merge 汉化版
+# Sublime Merge Chinese
+> Sublime Merge 汉化版

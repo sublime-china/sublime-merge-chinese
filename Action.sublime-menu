@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Create Branch…",
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "create_branch"
+        }
+    },
+    {
+        "caption": "Merge Branch…",
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "merge_branch"
+        }
+    },
+    { "caption": "-" },
+    { "command": "git_undo", "mnemonic": "U" },
+    { "command": "git_redo", "mnemonic": "R" },
+    { "caption": "-", "id": "end" }
+]

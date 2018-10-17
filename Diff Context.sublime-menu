@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Open in Editor…",
+        "command": "open_in_editor",
+        "args": { "path": "$working_dir/$path", "line": "$line", "col": "$col" }
+    },
+    { "caption": "-" },
+    { "command": "copy" },
+    { "command": "select_all" }
+]

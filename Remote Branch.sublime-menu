@@ -1,0 +1,13 @@
+[
+    { "command": "checkout_branch", "args": {"branch": "$branch"} },
+    { "command": "merge_branch", "args": {"branch": "$branch"} },
+    { "command": "rebase_branch", "args": {"branch": "$branch"} },
+    { "command": "create_branch", "args": {"from": "$branch"} },
+    { "command": "delete_branch", "args": {"ref": "$ref"} },
+    {
+        "caption": "Copy '$branch'",
+        "command": "copy_to_clipboard",
+        "args": {"text": "$branch"}
+    },
+    { "caption": "-", "id": "end" }
+]

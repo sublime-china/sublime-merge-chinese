@@ -1,0 +1,8 @@
+[
+    {
+        "caption": "Amend Previous Commit",
+        "command": "commit",
+        "args": {"mode": "commit --amend"}
+    },
+    { "caption": "-", "id": "end" }
+]

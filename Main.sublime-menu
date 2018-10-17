@@ -1,0 +1,314 @@
+[
+    {
+        "caption": "File",
+        "mnemonic": "F",
+        "id": "file",
+        "children":
+        [
+            { "command": "prompt_new_repository", "caption": "New Repository" },
+            { "command": "display_clone_page", "caption": "Clone Repository…" },
+            { "command": "prompt_open_repository", "caption": "Open Repository…" },
+            { "command": "quick_switch_repository", "caption": "Switch Repository…" },
+            {
+                "caption": "Open Recent",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "quick_open_repository", "caption": "Select…" },
+                    { "caption": "-" },
+                    { "command": "open_recent", "args": {"index": 0 } },
+                    { "command": "open_recent", "args": {"index": 1 } },
+                    { "command": "open_recent", "args": {"index": 2 } },
+                    { "command": "open_recent", "args": {"index": 3 } },
+                    { "command": "open_recent", "args": {"index": 4 } },
+                    { "command": "open_recent", "args": {"index": 5 } },
+                    { "command": "open_recent", "args": {"index": 6 } },
+                    { "command": "open_recent", "args": {"index": 7 } },
+                    { "command": "open_recent", "args": {"index": 8 } },
+                    { "command": "open_recent", "args": {"index": 9 } },
+                    { "command": "open_recent", "args": {"index": 10 } },
+                    { "command": "open_recent", "args": {"index": 11 } },
+                    { "command": "open_recent", "args": {"index": 12 } },
+                    { "command": "open_recent", "args": {"index": 13 } },
+                    { "command": "open_recent", "args": {"index": 14 } },
+                    { "command": "open_recent", "args": {"index": 15 } },
+                    { "caption": "-" },
+                    { "command": "clear_recent", "caption": "Clear Recent" },
+                ]
+            },
+            { "caption": "-" },
+            { "command": "new_window", "caption": "New Window" },
+            { "command": "close_window", "caption": "Close Window" },
+            { "caption": "-", "id": "exit" },
+            { "command": "exit", "caption": "Exit", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Quit", "mnemonic": "Q", "platform": "Linux" },
+        ]
+    },
+    {
+        "caption": "Edit",
+        "mnemonic": "E",
+        "id": "edit",
+        "children":
+        [
+            { "command": "undo", "mnemonic": "U" },
+            { "command": "redo_or_repeat", "mnemonic": "R" },
+            { "caption": "-" },
+            { "command": "cut", "mnemonic": "t" },
+            { "command": "copy", "mnemonic": "C" },
+            { "command": "paste", "mnemonic": "P" },
+            { "caption": "-" },
+            { "command": "select_all" },
+            { "caption": "-", "id": "end" },
+        ]
+    },
+    {
+        "caption": "Repository",
+        "mnemonic": "R",
+        "id": "repository",
+        "children":
+        [
+            { "command": "git_undo", "mnemonic": "U" },
+            { "command": "git_redo", "mnemonic": "R" },
+            { "caption": "-" },
+            { "command": "stash", "caption": "Stash" },
+            { "command": "pop_stash", "caption": "Pop Stash" },
+            { "caption": "-" },
+            { "command": "show_command_palette", "args": { "command": "pull" }, "caption": "Pull…" },
+            {
+                "caption": "Push…",
+                "command": "show_command_palette",
+                "args": { "command": "push", "args": {"prompt": true} },
+            },
+            { "caption": "-" },
+            {
+                "caption": "Checkout Branch…",
+                "command": "show_command_palette",
+                "args": { "command": "checkout_branch" },
+            },
+            {
+                "caption": "Create Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "create_branch"
+                }
+            },
+            {
+                "caption": "Rename Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "rename_branch"
+                }
+            },
+            {
+                "caption": "Delete Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "delete_branch",
+                    "args": {"prompt": false},
+                }
+            },
+            { "caption": "-" },
+            {
+                "caption": "Merge Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "merge_branch"
+                }
+            },
+            {
+                "caption": "Rebase Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "rebase_branch"
+                }
+            },
+            { "caption": "-" },
+            { "command": "open_dir", "args": {"dir": "$working_dir"}, "caption": "Open Containing Folder…" },
+            { "caption": "-", "id": "end" }
+        ]
+    },
+    {
+        "caption": "Navigate",
+        "mnemonic": "N",
+        "id": "navigate",
+        "children":
+        [
+            { "command": "navigate_back", "caption": "Go Back" },
+            { "command": "navigate_forward", "caption": "Go Forward" },
+            { "command": "navigate_to_commit_message", "caption": "Go to Commit Changes" },
+            { "command": "navigate_to_head", "caption": "Go to HEAD" },
+            {
+                "caption": "Navigate to Commit…",
+                "command": "show_command_palette",
+                "args": {"command": "navigate_to_commit"},
+            },
+            { "caption": "-" },
+            { "command": "toggle_search", "caption": "Search" },
+            { "command": "show_command_palette", "args": {"command": "blame"}, "caption": "Blame…" },
+            { "command": "show_command_palette", "args": {"command": "file_history"}, "caption": "File History…" },
+            { "caption": "-", "id": "end" },
+        ]
+    },
+    {
+        "caption": "Tools",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [
+            { "command": "show_command_palette", "caption": "Command Palette…" },
+            { "command": "refresh" },
+            { "caption": "-" },
+            {
+                "caption": "Edit .gitattributes…",
+                "command": "open_in_editor",
+                "args": {
+                    "path": "$working_dir/.gitattributes", "line": "$line", "col": "$col",
+                    "default": "# Specify filepatterns you want to assign special attributes.\n\n"
+                },
+            },
+            {
+                "caption": "Edit .gitignore…",
+                "command": "open_in_editor",
+                "args": {
+                    "path": "$working_dir/.gitignore", "line": "$line", "col": "$col",
+                    "default": "# Specify filepatterns you want git to ignore.\n\n"
+                },
+            },
+            {
+                "caption": "Password Caching",
+                "platform": "!Windows",
+                "children":
+                [
+                    {
+                        "command": "git_config",
+                        "caption": "Don't Cache",
+                        "args":
+                        {
+                            "key": "credential.helper",
+                            "value": "cache --timeout=0",
+                            "is_default_value": true,
+                        },
+                        "checkbox": true
+                    },
+                    {
+                        "command": "git_config",
+                        "caption": "Cache for 10 minutes",
+                        "args":
+                        {
+                            "key": "credential.helper",
+                            "value": "cache --timeout=600",
+                        },
+                        "checkbox": true
+                    },
+                    {
+                        "command": "git_config",
+                        "caption": "Cache for 1 hour",
+                        "args":
+                        {
+                            "key": "credential.helper",
+                            "value": "cache --timeout=3600",
+                        },
+                        "checkbox": true
+                    },
+                    {
+                        "command": "git_config",
+                        "caption": "Cache for 1 day",
+                        "args":
+                        {
+                            "key": "credential.helper",
+                            "value": "cache --timeout=86400",
+                        },
+                        "checkbox": true
+                    },
+                    {
+                        "command": "git_config",
+                        "caption": "Cache for 1 week",
+                        "args":
+                        {
+                            "key": "credential.helper",
+                            "value": "cache --timeout=604800",
+                        },
+                        "checkbox": true
+                    },
+                ]
+            },
+            { "caption": "-" },
+            { "command": "init_gitflow", "caption": "Initialize Git Flow" },
+            { "command": "edit_gitflow_config", "caption": "Configure Git Flow" },
+            {
+                "caption": "Start Git Flow Feature Branch",
+                "command": "gitflow_start_feature",
+            },
+            {
+                "caption": "Start Git Flow Bugfix Branch",
+                "command": "gitflow_start_bugfix",
+            },
+            {
+                "caption": "Start Git Flow Release Branch",
+                "command": "gitflow_start_release",
+            },
+            {
+                "caption": "Start Git Flow Hotfix Branch",
+                "command": "gitflow_start_hotfix",
+            },
+            {
+                "caption": "Start Git Flow Support Branch",
+                "command": "gitflow_start_support",
+            },
+            { "caption": "-", "id": "full_screen" },
+            { "command": "toggle_full_screen" },
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            { "command": "show_command_palette", "args": {"command": "preferences"}, "caption": "Preferences…" },
+            { "caption": "-" },
+            {
+                "caption": "Edit Settings…",
+                "command": "open_in_editor",
+                "args":
+                {
+                    "path": "${packages}/User/Preferences.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\n}\n"
+                },
+            },
+            {
+                "caption": "Edit Commit Message Settings…",
+                "command": "open_in_editor",
+                "args":
+                {
+                    "path": "${packages}/User/Commit Message.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Commit Message.sublime-settings\"\n{\n\n}\n"
+                },
+            },
+            { "caption": "-" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Browse Packages…", "mnemonic": "B" },
+        ]
+    },
+    {
+        "caption": "Help",
+        "mnemonic": "H",
+        "id": "help",
+        "children":
+        [
+            { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
+            { "caption": "-" },
+            { "command": "show_license_window", "caption": "Enter License" },
+            { "command": "remove_license"},
+            { "caption": "-" },
+            { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
+            { "command": "generate_debug_info", "caption": "Debug Information" },
+            { "command": "show_changelog", "caption": "Changelog…" },
+            { "command": "show_about_window", "caption": "About Sublime Merge", "mnemonic": "A" },
+        ]
+    }
+]

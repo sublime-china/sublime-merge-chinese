@@ -1,0 +1,17 @@
+[
+    {
+        "description": "Delete $tag_name",
+        "command": "delete_tag",
+        "args": {"ref": "$ref"}
+    },
+    {
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "push_tag",
+            "args": { "ref": "$ref" },
+            "description": "Push $tag_name",
+        },
+    },
+    { "caption": "-", "id": "end" }
+]
