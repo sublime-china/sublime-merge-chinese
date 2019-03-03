@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Copy Commit Hash",
+        "caption": "Copy '$short_commit…'",
         "command": "copy_to_clipboard",
         "args": {"text": "$commit"}
     },
@@ -41,8 +41,35 @@
                 "command": "edit_commit",
             },
             {
+                "caption": "Edit Commit Contents",
+                "command": "edit_commit_contents",
+                "args": { "commit": "$commit" },
+            },
+            {
                 "caption": "Squash with Parent",
                 "command": "squash_commit",
+            },
+            {
+                "caption": "Squash Selected Commits",
+                "command": "squash_commits",
+            },
+            {
+                "caption": "Squash Selected Commits, ignoring new messages (fixup)",
+                "command": "fixup_commits",
+            },
+            {
+                "caption": "Move Commit Up",
+                "command": "move_commit",
+                "args": { "commit": "$commit", "down": false },
+            },
+            {
+                "caption": "Move Commit Down",
+                "command": "move_commit",
+                "args": { "commit": "$commit", "down": true },
+            },
+            {
+                "caption": "Drop Selected Commits",
+                "command": "drop_commits",
             },
         ]
     },

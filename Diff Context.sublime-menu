@@ -6,5 +6,16 @@
     },
     { "caption": "-" },
     { "command": "copy" },
-    { "command": "select_all" }
+    { "command": "select_all" },
+    { "caption": "-" },
+    { "command": "toggle_ignore_diff_whitespace" },
+    {
+        "caption": "Word Wrap",
+        "children":
+        [
+            { "command": "set_word_wrap", "caption": "Auto",  "args": {"word_wrap": "auto" }, "checkbox": true },
+            { "command": "set_word_wrap", "caption": "Enabled", "args": {"word_wrap": true }, "checkbox": true },
+            { "command": "set_word_wrap", "caption": "Disabled", "args": {"word_wrap": false }, "checkbox": true },
+        ],
+    },
 ]

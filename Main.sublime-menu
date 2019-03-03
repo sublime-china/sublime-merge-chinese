@@ -58,6 +58,8 @@
             { "command": "paste", "mnemonic": "P" },
             { "caption": "-" },
             { "command": "select_all" },
+            { "caption": "-" },
+            { "command": "wrap_lines", "caption": "Wrap Paragraph" },
             { "caption": "-", "id": "end" },
         ]
     },
@@ -71,6 +73,7 @@
             { "command": "git_redo", "mnemonic": "R" },
             { "caption": "-" },
             { "command": "stash", "caption": "Stash" },
+            { "command": "show_command_palette", "args": { "command": "stash" }, "caption": "Stash with…" },
             { "command": "pop_stash", "caption": "Pop Stash" },
             { "caption": "-" },
             { "command": "show_command_palette", "args": { "command": "pull" }, "caption": "Pull…" },
@@ -86,6 +89,15 @@
                 "args": { "command": "checkout_branch" },
             },
             {
+                "caption": "Checkout Remote Branch…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "checkout_branch",
+                    "args": { "local_refs": false, "remote_refs": true }
+                },
+            },
+            {
                 "caption": "创建分支…",
                 "command": "show_command_palette",
                 "args":
@@ -95,6 +107,14 @@
             },
             {
                 "caption": "重命名分支…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "create_branch_from_remote_branch"
+                }
+            },
+            {
+                "caption": "Rename Branch…",
                 "command": "show_command_palette",
                 "args":
                 {
@@ -129,6 +149,7 @@
             },
             { "caption": "-" },
             { "command": "open_dir", "args": {"dir": "$working_dir"}, "caption": "打开所在目录…" },
+            { "command": "open_dir_in_sublime_text", "args": {"dir": "$working_dir"}, "caption": "Open in Sublime Text…" },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -142,11 +163,24 @@
             { "command": "navigate_forward", "caption": "前进" },
             { "command": "navigate_to_commit_message", "caption": "跳转到提交信息" },
             { "command": "navigate_to_head", "caption": "跳转到HEAD" },
+            { "command": "navigate_to_parent", "caption": "Go to Parent" },
             {
                 "caption": "跳转到Commit…",
                 "command": "show_command_palette",
                 "args": {"command": "navigate_to_commit"},
             },
+            {
+                "caption": "Navigate to Branch…",
+                "command": "show_command_palette",
+                "args": {"command": "navigate_to_branch"},
+            },
+            {
+                "caption": "Navigate to Tag…",
+                "command": "show_command_palette",
+                "args": {"command": "navigate_to_tag"},
+            },
+            { "caption": "-" },
+            { "command": "toggle_select_file", "caption": "Show Contents" },
             { "caption": "-" },
             { "command": "toggle_search", "caption": "查找" },
             { "command": "show_command_palette", "args": {"command": "blame"}, "caption": "Blame…" },
@@ -242,23 +276,28 @@
             { "command": "edit_gitflow_config", "caption": "配置 Git Flow" },
             {
                 "caption": "Start Git Flow Feature Branch",
-                "command": "gitflow_start_feature",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_feature" },
             },
             {
                 "caption": "Start Git Flow Bugfix Branch",
-                "command": "gitflow_start_bugfix",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_bugfix" },
             },
             {
                 "caption": "Start Git Flow Release Branch",
-                "command": "gitflow_start_release",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_release" },
             },
             {
                 "caption": "Start Git Flow Hotfix Branch",
-                "command": "gitflow_start_hotfix",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_hotfix" },
             },
             {
                 "caption": "Start Git Flow Support Branch",
-                "command": "gitflow_start_support",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_support" },
             },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen" },
@@ -270,7 +309,7 @@
         "id": "preferences",
         "children":
         [
-            { "command": "show_command_palette", "args": {"command": "preferences"}, "caption": "偏好…" },
+            { "command": "open_preferences", "caption": "偏好…" },
             { "caption": "-" },
             {
                 "caption": "编辑设置…",

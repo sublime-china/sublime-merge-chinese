@@ -18,5 +18,11 @@
     { "caption": "-" },
     { "command": "git_undo", "mnemonic": "U" },
     { "command": "git_redo", "mnemonic": "R" },
+    { "caption": "-" },
+    {
+        "caption": "Open Repository in Sublime Text…",
+        "command": "open_dir_in_sublime_text",
+        "args": { "dir": "$working_dir" }
+    },
     { "caption": "-", "id": "end" }
 ]

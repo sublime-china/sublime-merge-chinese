@@ -1,0 +1,6 @@
+[
+    { "command": "copy" },
+    { "command": "select_all" },
+    { "caption": "-" },
+    { "command": "toggle_ignore_diff_whitespace" },
+]

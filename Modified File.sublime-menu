@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Stage",
+        "command": "stage_file", "args": { "path": "$path" },
+    },
+    {
+        "caption": "Discard",
+        "command": "discard_file", "args": { "path": "$path" },
+    },
+]

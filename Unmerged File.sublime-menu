@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Resolve Conflict",
+        "command": "resolve_merge_conflict", "args": { "path": "$path" },
+    },
+    {
+        "caption": "Stage",
+        "command": "stage_file", "args": { "path": "$path" },
+    },
+]

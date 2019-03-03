@@ -1,8 +1,11 @@
 [
-    { "command": "checkout_branch", "args": {"branch": "$branch"} },
-    { "command": "merge_branch", "args": {"branch": "$branch"} },
+    { "command": "checkout_branch", "args": { "branch": "$branch" } },
+    {
+        "command": "merge_branch",
+        "args": { "branch": "$branch" },
+    },
     { "command": "rebase_branch", "args": { "branch": "$branch" } },
-    { "command": "delete_branch", "args": {"ref": "$ref"} },
+    { "command": "delete_branch", "args": { "ref": "$ref" } },
     {
         "command": "show_command_palette",
         "args":
@@ -15,7 +18,20 @@
     {
         "caption": "Copy '$branch'",
         "command": "copy_to_clipboard",
-        "args": {"text": "$branch"}
+        "args": { "text": "$branch" }
+    },
+    { "command": "hide_ref", "args": { "ref": "$ref" } },
+    { "command": "show_ref", "args": { "ref": "$ref" } },
+    { "command": "hide_all_refs_except", "args": { "ref": "$ref" } },
+    { "command": "show_all_refs", "args": { "ref": "$ref" } },
+    {
+        "command": "show_command_palette",
+        "args":
+        {
+            "command": "set_upstream",
+            "args": { "branch": "$branch" },
+            "description": "Set Upstream…"
+        }
     },
     { "caption": "-" },
     {

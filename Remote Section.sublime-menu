@@ -1,0 +1,9 @@
+[
+    {
+        "caption": "Add Remote…",
+        "command": "show_command_palette", "args":
+        {
+            "command": "add_remote",
+        }
+    },
+]

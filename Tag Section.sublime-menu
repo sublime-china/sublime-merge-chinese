@@ -1,0 +1,9 @@
+[
+    {
+        "caption": "Create Tag…",
+        "command": "show_command_palette", "args":
+        {
+            "command": "create_tag",
+        }
+    },
+]

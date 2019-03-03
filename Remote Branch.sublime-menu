@@ -1,13 +1,20 @@
 [
-    { "command": "checkout_branch", "args": {"branch": "$branch"} },
-    { "command": "merge_branch", "args": {"branch": "$branch"} },
-    { "command": "rebase_branch", "args": {"branch": "$branch"} },
     { "command": "create_branch", "args": {"from": "$branch"} },
+    { "command": "checkout_branch", "args": {"branch": "$branch"} },
+    {
+        "command": "merge_branch",
+        "args": { "branch": "$branch" },
+    },
+    { "command": "rebase_branch", "args": {"branch": "$branch"} },
     { "command": "delete_branch", "args": {"ref": "$ref"} },
     {
         "caption": "Copy '$branch'",
         "command": "copy_to_clipboard",
         "args": {"text": "$branch"}
     },
+    { "command": "hide_ref", "args": { "ref": "$ref" } },
+    { "command": "show_ref", "args": { "ref": "$ref" } },
+    { "command": "hide_all_refs_except", "args": { "ref": "$ref" } },
+    { "command": "show_all_refs", "args": { "ref": "$ref" } },
     { "caption": "-", "id": "end" }
 ]
