@@ -1,6 +1,6 @@
 [
     {
-        "description": "Delete $tag_name",
+        "description": "删除标签: '$tag_name'",
         "command": "delete_tag",
         "args": {"ref": "$ref"}
     },
@@ -10,7 +10,7 @@
         {
             "command": "push_tag",
             "args": { "ref": "$ref" },
-            "description": "Push $tag_name",
+            "description": "推送标签: '$tag_name'",
         },
     },
     { "caption": "-", "id": "end" }

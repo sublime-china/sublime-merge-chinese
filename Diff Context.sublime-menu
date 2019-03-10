@@ -1,21 +1,21 @@
 [
     {
-        "caption": "Open in Editor…",
+        "caption": "在编辑器中打开…",
         "command": "open_in_editor",
         "args": { "path": "$working_dir/$path", "line": "$line", "col": "$col" }
     },
     { "caption": "-" },
-    { "command": "copy" },
-    { "command": "select_all" },
+    { "command": "copy", "caption": "复制" },
+    { "command": "select_all", "caption": "选择全部" },
     { "caption": "-" },
-    { "command": "toggle_ignore_diff_whitespace" },
+    { "command": "toggle_ignore_diff_whitespace", "caption": "忽略/显示空白字符更改" },
     {
-        "caption": "Word Wrap",
+        "caption": "自动换行",
         "children":
         [
-            { "command": "set_word_wrap", "caption": "Auto",  "args": {"word_wrap": "auto" }, "checkbox": true },
-            { "command": "set_word_wrap", "caption": "Enabled", "args": {"word_wrap": true }, "checkbox": true },
-            { "command": "set_word_wrap", "caption": "Disabled", "args": {"word_wrap": false }, "checkbox": true },
+            { "command": "set_word_wrap", "caption": "自动",  "args": {"word_wrap": "auto" }, "checkbox": true },
+            { "command": "set_word_wrap", "caption": "启用", "args": {"word_wrap": true }, "checkbox": true },
+            { "command": "set_word_wrap", "caption": "禁用", "args": {"word_wrap": false }, "checkbox": true },
         ],
     },
 ]

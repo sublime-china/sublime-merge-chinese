@@ -1,9 +1,9 @@
 [
-    { "command": "clear_location", "caption": "Clear" },
-    { "command": "add_directory", "caption": "Add Folder" },
-    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Add Include Filter" },
-    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Add Exclude Filter" },
-    { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Add Open Folders" },
-    { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Add Open Files" },
-    { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Add Current File" },
+    { "command": "clear_location", "caption": "清除" },
+    { "command": "add_directory", "caption": "添加目录" },
+    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "添加包含筛选器" },
+    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "添加排除筛选器" },
+    { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "添加打开的文件夹" },
+    { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "添加打开的文件" },
+    { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "添加当前文件" },
 ]

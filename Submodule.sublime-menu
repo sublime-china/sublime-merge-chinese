@@ -1,22 +1,22 @@
 [
     {
-        "description": "initialize $submodule_name",
+        "description": "初始化 $submodule_name",
         "command": "initialize_submodule",
         "args": {"submodule_path": "$submodule_path", "submodule_name": "$submodule_name"}
     },
     {
-        "caption": "Open Submodule",
+        "caption": "打开子模块",
         "description": "Open $submodule_name",
         "command": "open_submodule",
         "args": {"submodule_path": "$submodule_path", }
     },
     {
-        "description": "Update $submodule_name",
+        "description": "更新 $submodule_name",
         "command": "update_submodule",
         "args": {"submodule_path": "$submodule_path"}
     },
     {
-        "description": "Sync $submodule_name",
+        "description": "同步 $submodule_name",
         "command": "sync_submodule",
         "args": {"submodule_path": "$submodule_path"}
     },

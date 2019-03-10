@@ -1,10 +1,10 @@
 [
     {
-        "caption": "Resolve Conflict",
+        "caption": "解决冲突",
         "command": "resolve_merge_conflict", "args": { "path": "$path" },
     },
     {
-        "caption": "Stage",
+        "caption": "暂存",
         "command": "stage_file", "args": { "path": "$path" },
     },
 ]

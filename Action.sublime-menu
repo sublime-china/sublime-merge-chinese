@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Create Branch…",
+        "caption": "创建分支…",
         "command": "show_command_palette",
         "args":
         {
@@ -8,7 +8,7 @@
         }
     },
     {
-        "caption": "Merge Branch…",
+        "caption": "合并分支…",
         "command": "show_command_palette",
         "args":
         {
@@ -20,7 +20,7 @@
     { "command": "git_redo", "mnemonic": "R" },
     { "caption": "-" },
     {
-        "caption": "Open Repository in Sublime Text…",
+        "caption": "在 Sublime Text 中打开所在目录…",
         "command": "open_dir_in_sublime_text",
         "args": { "dir": "$working_dir" }
     },

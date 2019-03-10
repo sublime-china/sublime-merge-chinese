@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Unstage",
+        "caption": "丢弃",
         "command": "unstage_file", "args": { "path": "$path" }
     },
 ]

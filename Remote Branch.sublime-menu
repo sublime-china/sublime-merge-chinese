@@ -1,20 +1,21 @@
 [
-    { "command": "create_branch", "args": {"from": "$branch"} },
-    { "command": "checkout_branch", "args": {"branch": "$branch"} },
+    { "command": "create_branch", "args": {"from": "$branch"}, "caption": "创建分支…" },
+    { "command": "checkout_branch", "args": {"branch": "$branch"}, "caption": "切换分支" },
     {
+        "caption": "合并分支…",
         "command": "merge_branch",
         "args": { "branch": "$branch" },
     },
-    { "command": "rebase_branch", "args": {"branch": "$branch"} },
-    { "command": "delete_branch", "args": {"ref": "$ref"} },
+    { "command": "rebase_branch", "args": {"branch": "$branch"}, "caption": "Rebase '$branch' 分支…" },
+    { "command": "delete_branch", "args": {"ref": "$ref"}, "caption": "删除 '$branch' 分支…" },
     {
-        "caption": "Copy '$branch'",
+        "caption": "复制分支名: '$branch'",
         "command": "copy_to_clipboard",
         "args": {"text": "$branch"}
     },
-    { "command": "hide_ref", "args": { "ref": "$ref" } },
-    { "command": "show_ref", "args": { "ref": "$ref" } },
-    { "command": "hide_all_refs_except", "args": { "ref": "$ref" } },
-    { "command": "show_all_refs", "args": { "ref": "$ref" } },
+    { "command": "hide_ref", "args": { "ref": "$ref" }, "caption": "隐藏 '$branch' 分支" },
+    { "command": "show_ref", "args": { "ref": "$ref" }, "caption": "显示 '$branch' 分支" },
+    { "command": "hide_all_refs_except", "args": { "ref": "$ref" }, "caption": "隐藏除 '$branch' 之外的所有分支" },
+    { "command": "show_all_refs", "args": { "ref": "$ref" }, "caption": "显示所有隐藏的分支" },
     { "caption": "-", "id": "end" }
 ]

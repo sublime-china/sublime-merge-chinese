@@ -1,6 +1,6 @@
 [
-    { "command": "copy" },
-    { "command": "select_all" },
+    { "command": "copy", "caption": "复制" },
+    { "command": "select_all", "caption": "选择全部" },
     { "caption": "-" },
-    { "command": "toggle_ignore_diff_whitespace" },
+    { "command": "toggle_ignore_diff_whitespace", "caption": "忽略/显示空白字符更改"  },
 ]
