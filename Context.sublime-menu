@@ -1,6 +1,8 @@
 [
     { "command": "open_context_url" },
     { "command": "context_goto_definition", "caption": "Goto Definition" },
+    { "caption": "-", "id": "diff" },
+    { "command": "toggle_inline_diff" },
     { "caption": "-", "id": "clipboard" },
     { "command": "cut" },
     { "command": "copy" },
