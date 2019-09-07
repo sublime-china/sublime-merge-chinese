@@ -1,0 +1,8 @@
+[
+    {
+        "caption": "Save without Staging",
+        "command": "save_without_staging",
+        "args": {}
+    },
+    { "caption": "-", "id": "end" }
+]

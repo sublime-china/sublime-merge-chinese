@@ -5,7 +5,7 @@
         "command": "merge_branch",
         "args": { "branch": "$branch" },
     },
-    { "command": "rebase_branch", "args": { "branch": "$branch" }, "caption": "Rebase '$branch' 分支…" },
+    { "command": "rebase_branch", "args": { "branch": "$branch", "commit": "$commit" }, "caption": "Rebase '$branch' 分支…" },
     { "command": "delete_branch", "args": { "ref": "$ref" }, "caption": "删除 '$branch' 分支…" },
     {
         "command": "show_command_palette",

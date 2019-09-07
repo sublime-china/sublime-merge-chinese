@@ -1,0 +1,11 @@
+[
+    {
+        "caption": "Take Left",
+        "command": "take_ours",
+    },
+    {
+        "caption": "Take Right",
+        "command": "take_theirs",
+    },
+    { "caption": "-", "id": "end" }
+]

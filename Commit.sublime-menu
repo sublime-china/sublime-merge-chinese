@@ -84,6 +84,10 @@
         "args": {"commit": "$commit"}
     },
     {
+        "command": "rebase_branch",
+        "args": {"commit": "$commit"}
+    },
+    {
         "caption": "重置 $head_ref 到当前提交",
         "children":
         [
