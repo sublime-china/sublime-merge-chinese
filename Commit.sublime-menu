@@ -1,22 +1,22 @@
 [
     {
-        "caption": "Copy Commit Hash",
+        "caption": "复制提交 Hash: '$short_commit…'",
         "command": "copy_to_clipboard",
         "args": {"text": "$commit"}
     },
     {
-        "caption": "View Tree",
+        "caption": "查看文件树",
         "command": "view_tree",
     },
     {
         "caption": "-",
     },
     {
-        "caption": "Checkout Commit",
+        "caption": "切换到当前提交",
         "command": "checkout_branch", "args": {"branch": "$commit"}
     },
     {
-        "caption": "Create Branch at Commit",
+        "caption": "从当前提交创建分支",
         "command": "show_command_palette", "args":
         {
             "command": "create_branch",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "caption": "Create Tag at Commit",
+        "caption": "从当前提交创建标签",
         "command": "show_command_palette",
         "args":
         {
@@ -33,21 +33,48 @@
         },
     },
     {
-        "caption": "Edit Commit",
+        "caption": "编辑提交",
         "children":
         [
             {
-                "caption": "Edit Commit Message",
+                "caption": "编辑提交信息",
                 "command": "edit_commit",
+            },
+            {
+                "caption": "编辑提交内容",
+                "command": "edit_commit_contents",
+                "args": { "commit": "$commit" },
             },
             {
                 "caption": "Squash with Parent",
                 "command": "squash_commit",
             },
+            {
+                "caption": "压缩选定的提交",
+                "command": "squash_commits",
+            },
+            {
+                "caption": "Squash Selected Commits, ignoring new messages (fixup)",
+                "command": "fixup_commits",
+            },
+            {
+                "caption": "向上移动提交",
+                "command": "move_commit",
+                "args": { "commit": "$commit", "down": false },
+            },
+            {
+                "caption": "向下移动提交",
+                "command": "move_commit",
+                "args": { "commit": "$commit", "down": true },
+            },
+            {
+                "caption": "删除提交",
+                "command": "drop_commits",
+            },
         ]
     },
     {
-        "caption": "Revert Commit",
+        "caption": "恢复提交",
         "command": "revert_commit",
         "args": {"commit": "$commit"}
     },
@@ -57,22 +84,26 @@
         "args": {"commit": "$commit"}
     },
     {
-        "caption": "Reset $head_ref to this commit",
+        "command": "rebase_branch",
+        "args": {"commit": "$commit"}
+    },
+    {
+        "caption": "重置 $head_ref 到当前提交",
         "children":
         [
             {
-                "caption": "Soft - Keep index and working directory, differences will show as staged",
+                "caption": "软重置 - 保留索引和工作目录，差异将显示为暂存",
                 "command": "reset",
                 "args": {"commit": "$commit", "mode": "soft"}
             },
             {
 
-                "caption": "Mixed (Default) - Keep working directory, differences will show as modifications",
+                "caption": "混合 (默认) - 保持工作目录，差异将显示为修改",
                 "command": "reset",
                 "args": {"commit": "$commit", "mode": "mixed"}
             },
             {
-                "caption": "Hard - Reset index and working directory, ALL local changes are discarded",
+                "caption": "硬重置 - 重置索引和工作目录，丢弃所有本地更改",
                 "command": "reset",
                 "args": {"commit": "$commit", "mode": "hard"}
             },

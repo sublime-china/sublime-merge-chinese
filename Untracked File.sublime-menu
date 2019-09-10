@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "暂存",
+        "command": "stage_file", "args": { "path": "$path" },
+    },
+    {
+        "caption": "删除",
+        "command": "delete_file", "args": { "path": "$path" },
+    },
+]

@@ -1,18 +1,18 @@
 [
     {
-        "caption": "Add Submodule",
+        "caption": "添加子模块…",
         "command": "show_command_palette", "args":
         {
             "command": "add_submodule",
         }
     },
     {
-        "caption": "Update All Initialized Submodules",
+        "caption": "更新所有已初始化的子模块",
         "command": "update_submodule",
         "args": { "foreach": true }
     },
     {
-        "caption": "Sync All Initialized Submodules",
+        "caption": "同步所有初始化的子模块",
         "command": "sync_submodule",
         "args": { "foreach": true }
     },

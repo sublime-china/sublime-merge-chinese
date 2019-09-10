@@ -50,14 +50,16 @@
         "id": "edit",
         "children":
         [
-            { "command": "undo", "mnemonic": "U" },
-            { "command": "redo_or_repeat", "mnemonic": "R" },
+            { "command": "undo", "caption": "撤销", "mnemonic": "U" },
+            { "command": "redo_or_repeat", "caption": "重做", "mnemonic": "R" },
             { "caption": "-" },
-            { "command": "cut", "mnemonic": "t" },
-            { "command": "copy", "mnemonic": "C" },
-            { "command": "paste", "mnemonic": "P" },
+            { "command": "cut", "caption": "剪切", "mnemonic": "t" },
+            { "command": "copy", "caption": "复制", "mnemonic": "C" },
+            { "command": "paste", "caption": "粘贴", "mnemonic": "P" },
             { "caption": "-" },
-            { "command": "select_all" },
+            { "command": "select_all" , "caption": "选择全部" },
+            { "caption": "-" },
+            { "command": "wrap_lines", "caption": "Wrap Paragraph" },
             { "caption": "-", "id": "end" },
         ]
     },
@@ -71,7 +73,8 @@
             { "command": "git_redo", "mnemonic": "R" },
             { "caption": "-" },
             { "command": "stash", "caption": "Stash" },
-            { "command": "pop_stash", "caption": "Pop Stash" },
+            { "command": "show_command_palette", "args": { "command": "stash" }, "caption": "Stash with…" },
+            { "command": "pop_stash", "caption": "取回 Stash" },
             { "caption": "-" },
             { "command": "show_command_palette", "args": { "command": "pull" }, "caption": "Pull…" },
             {
@@ -86,11 +89,28 @@
                 "args": { "command": "checkout_branch" },
             },
             {
+                "caption": "切换远程分支…",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "checkout_branch",
+                    "args": { "local_refs": false, "remote_refs": true }
+                },
+            },
+            {
                 "caption": "创建分支…",
                 "command": "show_command_palette",
                 "args":
                 {
                     "command": "create_branch"
+                }
+            },
+            {
+                "caption": "从远程分支创建分支...",
+                "command": "show_command_palette",
+                "args":
+                {
+                    "command": "create_branch_from_remote_branch"
                 }
             },
             {
@@ -129,6 +149,7 @@
             },
             { "caption": "-" },
             { "command": "open_dir", "args": {"dir": "$working_dir"}, "caption": "打开所在目录…" },
+            { "command": "open_dir_in_sublime_text", "args": {"dir": "$working_dir"}, "caption": "在 Sublime Text 中打开所在目录…" },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -138,15 +159,28 @@
         "id": "navigate",
         "children":
         [
-            { "command": "navigate_back", "caption": "返回" },
+            { "command": "navigate_back", "caption": "后退" },
             { "command": "navigate_forward", "caption": "前进" },
             { "command": "navigate_to_commit_message", "caption": "跳转到提交信息" },
-            { "command": "navigate_to_head", "caption": "跳转到HEAD" },
+            { "command": "navigate_to_head", "caption": "跳转到 HEAD" },
+            { "command": "navigate_to_parent", "caption": "跳转到 Parent" },
             {
-                "caption": "跳转到Commit…",
+                "caption": "跳转到提交…",
                 "command": "show_command_palette",
                 "args": {"command": "navigate_to_commit"},
             },
+            {
+                "caption": "跳转到分支…",
+                "command": "show_command_palette",
+                "args": {"command": "navigate_to_branch"},
+            },
+            {
+                "caption": "跳转到标签…",
+                "command": "show_command_palette",
+                "args": {"command": "navigate_to_tag"},
+            },
+            { "caption": "-" },
+            { "command": "toggle_select_file", "caption": "显示内容" },
             { "caption": "-" },
             { "command": "toggle_search", "caption": "查找" },
             { "command": "show_command_palette", "args": {"command": "blame"}, "caption": "Blame…" },
@@ -161,7 +195,7 @@
         "children":
         [
             { "command": "show_command_palette", "caption": "命令面板…" },
-            { "command": "refresh" },
+            { "command": "刷新" },
             { "caption": "-" },
             {
                 "caption": "编辑 .gitattributes…",
@@ -242,26 +276,31 @@
             { "command": "edit_gitflow_config", "caption": "配置 Git Flow" },
             {
                 "caption": "Start Git Flow Feature Branch",
-                "command": "gitflow_start_feature",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_feature" },
             },
             {
                 "caption": "Start Git Flow Bugfix Branch",
-                "command": "gitflow_start_bugfix",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_bugfix" },
             },
             {
                 "caption": "Start Git Flow Release Branch",
-                "command": "gitflow_start_release",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_release" },
             },
             {
                 "caption": "Start Git Flow Hotfix Branch",
-                "command": "gitflow_start_hotfix",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_hotfix" },
             },
             {
                 "caption": "Start Git Flow Support Branch",
-                "command": "gitflow_start_support",
+                "command": "show_command_palette",
+                "args": { "command": "gitflow_start_support" },
             },
             { "caption": "-", "id": "full_screen" },
-            { "command": "toggle_full_screen" },
+            { "command": "toggle_full_screen", "caption": "进入/退出全屏" },
         ]
     },
     {
@@ -270,7 +309,7 @@
         "id": "preferences",
         "children":
         [
-            { "command": "show_command_palette", "args": {"command": "preferences"}, "caption": "偏好…" },
+            { "command": "open_preferences", "caption": "偏好…" },
             { "caption": "-" },
             {
                 "caption": "编辑设置…",
@@ -291,7 +330,7 @@
                 },
             },
             { "caption": "-" },
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览 Packages…", "mnemonic": "B" },
         ]
     },
     {
