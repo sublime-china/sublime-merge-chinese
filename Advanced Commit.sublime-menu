@@ -1,6 +1,6 @@
 [
     {
-        "caption": "修补当前提交",
+        "caption": "修改上一次提交",
         "command": "commit",
         "args": {"mode": "commit --amend"}
     },

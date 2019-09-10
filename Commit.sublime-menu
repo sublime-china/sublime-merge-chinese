@@ -1,6 +1,6 @@
 [
     {
-        "caption": "复制提交 ID: '$short_commit…'",
+        "caption": "复制提交 Hash: '$short_commit…'",
         "command": "copy_to_clipboard",
         "args": {"text": "$commit"}
     },
@@ -74,7 +74,7 @@
         ]
     },
     {
-        "caption": "还原提交",
+        "caption": "恢复提交",
         "command": "revert_commit",
         "args": {"commit": "$commit"}
     },

@@ -11,5 +11,5 @@
 
 ### Git 项目克隆
 
-- ```git clone https://github.com/maboloshi/sublime-merge-chinese.git <用户包安装路径/Default>```
+- ```git clone https://github.com/sublime-china/sublime-merge-chinese.git <用户包安装路径/Default>```
 > 当然也可以直接使用`Sublime Merge`的`Clone Repository`功能
