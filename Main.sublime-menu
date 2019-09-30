@@ -330,7 +330,7 @@
                 },
             },
             { "caption": "-" },
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览 Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览插件包", "mnemonic": "B" },
         ]
     },
     {
