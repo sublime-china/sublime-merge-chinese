@@ -76,9 +76,9 @@
             { "command": "show_command_palette", "args": { "command": "stash" }, "caption": "Stash with…" },
             { "command": "pop_stash", "caption": "取回 Stash" },
             { "caption": "-" },
-            { "command": "show_command_palette", "args": { "command": "pull" }, "caption": "Pull…" },
+            { "command": "show_command_palette", "args": { "command": "pull" }, "caption": "拉取…" },
             {
-                "caption": "Push…",
+                "caption": "推送…",
                 "command": "show_command_palette",
                 "args": { "command": "push", "args": {"prompt": true} },
             },
@@ -330,7 +330,7 @@
                 },
             },
             { "caption": "-" },
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览 Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "浏览插件包", "mnemonic": "B" },
         ]
     },
     {
