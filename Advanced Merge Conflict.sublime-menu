@@ -1,0 +1,12 @@
+[
+	{
+		"caption": "Resolve Using Ours",
+		"command": "resolve_merge_conflict",
+		"args": {"path": "$path", "mode": "ours"}
+	},
+	{
+		"caption": "Resolve Using Theirs",
+		"command": "resolve_merge_conflict",
+		"args": {"path": "$path", "mode": "theirs"}
+	},
+]

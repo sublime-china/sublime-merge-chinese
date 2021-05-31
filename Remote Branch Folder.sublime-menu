@@ -1,0 +1,11 @@
+[
+    {
+        "caption": "复制 '$branch'",
+        "command": "copy_to_clipboard",
+        "args": { "text": "$branch" }
+    },
+    { "command": "hide_ref", "args": { "ref": "$ref" } },
+    { "command": "show_ref", "args": { "ref": "$ref" } },
+    { "command": "hide_all_refs_except", "args": { "ref": "$ref" } },
+    { "command": "show_all_refs", "args": { "ref": "$ref" } },
+]
