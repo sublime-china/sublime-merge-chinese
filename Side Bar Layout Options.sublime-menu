@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "一列布局",
+		"command": "set_preference", "args": { "setting": "side_bar_layout", "value": "tabs" }
+	},
+		{
+		"caption": "两列布局, 文件在左",
+		"command": "set_preference", "args": { "setting": "side_bar_layout", "value": "commit_graph_as_column" }
+	},
+	{
+		"caption": "两列布局, 文件在右",
+		"command": "set_preference", "args": { "setting": "side_bar_layout", "value": "locations_as_column" }
+	},
+	{
+		"caption": "三列布局",
+		"command": "set_preference", "args": { "setting": "side_bar_layout", "value": "columns" }
+	},
+]
