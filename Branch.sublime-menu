@@ -1,19 +1,19 @@
 [
-    { "command": "checkout_branch", "args": { "branch": "$branch" }, "caption": "创建分支…" },
+    { "command": "checkout_branch", "args": { "branch": "$branch" }, "caption": "创建分支" },
     {
-        "caption": "合并分支…",
+        "caption": "合并分支",
         "command": "merge_branch",
         "args": { "branch": "$branch" },
     },
-    { "command": "rebase_branch", "args": { "branch": "$branch", "commit": "$commit" }, "caption": "Rebase '$branch' 分支…" },
-    { "command": "delete_branch", "args": { "ref": "$ref" }, "caption": "删除 '$branch' 分支…" },
+    { "command": "rebase_branch", "args": { "branch": "$branch", "commit": "$commit" }, "caption": "Rebase '$branch' 分支" },
+    { "command": "delete_branch", "args": { "ref": "$ref" }, "caption": "删除 '$branch' 分支" },
     {
         "command": "show_command_palette",
         "args":
         {
             "command": "rename_branch",
             "args": {"branch": "$branch"},
-            "description": "重命名 '$branch' 分支…",
+            "description": "重命名 '$branch' 分支",
         }
     },
     {
@@ -31,27 +31,27 @@
         {
             "command": "set_upstream",
             "args": { "branch": "$branch" },
-            "description": "设置上游…"
+            "description": "设置上游"
         }
     },
     { "caption": "-" },
     {
-        "caption": "Git Flow: 完成",
+        "caption": "Git Flow: 特性开发完成",
         "command": "gitflow_finish_feature",
         "args": { "branch": "$branch" },
     },
     {
-        "caption": "Git Flow: 完成",
+        "caption": "Git Flow: 错误修复完成",
         "command": "gitflow_finish_bugfix",
         "args": { "branch": "$branch" },
     },
     {
-        "caption": "Git Flow: 完成",
+        "caption": "Git Flow: 最后测试完成",
         "command": "gitflow_finish_release",
         "args": { "branch": "$branch" },
     },
     {
-        "caption": "Git Flow: 完成",
+        "caption": "Git Flow: 紧急修复完成",
         "command": "gitflow_finish_hotfix",
         "args": { "branch": "$branch" },
     },

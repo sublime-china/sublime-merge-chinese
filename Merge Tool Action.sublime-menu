@@ -1,10 +1,11 @@
 [
     {
-        "caption": "Take Left",
+        "caption": "使用本分支信息",
+        //Take Left
         "command": "take_ours",
     },
     {
-        "caption": "Take Right",
+        "caption": "使用被合并分支信息",
         "command": "take_theirs",
     },
     { "caption": "-", "id": "end" }

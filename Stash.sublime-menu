@@ -1,6 +1,6 @@
 [
     {
-        "caption": "取回 Stash",
+        "caption": "弹出 Stash",
         "command": "pop_stash", "args": {"stash": "$stash"}
     },
     {

@@ -1,11 +1,13 @@
 [
 	{
-		"caption": "Resolve Using Ours",
+		"caption": "使用本分支数据解决冲突",
+		//Resolve Using Ours
 		"command": "resolve_merge_conflict",
 		"args": {"path": "$path", "mode": "ours"}
 	},
 	{
-		"caption": "Resolve Using Theirs",
+		"caption": "使用被合并分支数据解决冲突",
+		//Resolve Using Theirs
 		"command": "resolve_merge_conflict",
 		"args": {"path": "$path", "mode": "theirs"}
 	},

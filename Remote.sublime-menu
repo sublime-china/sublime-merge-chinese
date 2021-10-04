@@ -9,7 +9,7 @@
         },
     },
     {
-        "description": "Delete $remote",
+        "description": "删除远程分支$remote",
         "command": "delete_remote",
         "args": {"remote": "$remote"}
     },

@@ -1,16 +1,18 @@
 [
     {
-        "caption": "修改上一次提交",
+        "caption": "提交至上一次提交",
         "command": "commit",
         "args": {"mode": "commit --amend"}
     },
     {
-        "caption": "Commit without Commit Hooks (--no-verify)",
+        "caption": "无挂钩提交",
+        //Commit without Commit Hooks (--no-verify)
         "command": "commit",
         "args": {"mode": "commit", "options": ["--no-verify"]}
     },
     {
-        "caption": "Amend Commit without Commit Hooks (--amend --no-verify)",
+        "caption": "无挂钩提交至上一提交",
+        //Amend Commit without Commit Hooks (--amend --no-verify)
         "command": "commit",
         "args": {"mode": "commit --amend", "options": ["--no-verify"]}
     },
